@@ -1,7 +1,5 @@
-/**
- * Wrapper for app store
- */
 export declare class AppStore {
+    private store;
     /**
      * Get current state
      */
@@ -9,7 +7,7 @@ export declare class AppStore {
     /**
      * subscribe to a callback with the state
      */
-    subscribe: (subscribeFunction: (state) => void) => () => void;
+    subscribe: (subscribeFunction: (state, oldVal?: any, newVal?: any) => void, filter?: string, useIsEqual?: boolean) => () => void;
     /**
      * replaceReducer with a new one
      */
