@@ -1,5 +1,3 @@
-/////<reference path="../typings/requirejs/require.d.ts" />
-
 /**
  * Wrapper for app store
  */
