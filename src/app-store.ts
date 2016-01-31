@@ -72,6 +72,4 @@ export class AppStore {
             return (...args) => store.dispatch(actionCreator.call(context, ...args));
         };
     }
-
-
 }
