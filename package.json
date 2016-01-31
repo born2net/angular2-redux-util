@@ -1,6 +1,6 @@
 {
     "name": "angular2-redux-util",
-    "version": "0.5.33",
+    "version": "0.5.34",
     "description": "Wrapper components for using Redux in an Angular2 application",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
