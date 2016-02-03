@@ -5,6 +5,7 @@
 declare function require(path:any):any;
 
 var isEqual = require('is-equal');
+//var isEqual = undefined;
 var getValue = require('object-path').get;
 
 export class AppStore {

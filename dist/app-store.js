@@ -2,6 +2,7 @@
  * Wrapper for app store
  */
 var isEqual = require('is-equal');
+//var isEqual = undefined;
 var getValue = require('object-path').get;
 var AppStore = (function () {
     function AppStore(store) {
