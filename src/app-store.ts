@@ -5,8 +5,8 @@
 declare function require(path:any):any;
 
 var isEqual = require('is-equal');
-var getValue = require('object-path').get;
 var Immutable = require('immutable');
+var getValue = require('object-path').get;
 
 export class AppStore {
 
