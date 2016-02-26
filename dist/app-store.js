@@ -27,15 +27,17 @@ var AppStore = (function () {
             function watch(getState, objectPath, compare) {
                 compare = compare || defaultCompare;
                 var reducerName = objectPath.split('.')[0];
-                var mapPath = objectPath.split('.').splice(1).join('.');
+                var mapPath = objectPath.split('.').splice(1);
                 var baseVal = getValue(getState(), reducerName);
-                if (mapPath != '')
+                // if we are using a nested Immutable map, drill down the path
+                if (mapPath.length > 0)
                     baseVal = baseVal.getIn(mapPath);
                 return function w(fn) {
                     return function () {
                         var newVal = getValue(getState(), reducerName);
-                        if (mapPath != '')
-                            newVal = newVal.get(mapPath);
+                        // if we are using a nested Immutable map, drill down the path
+                        if (mapPath.length > 0)
+                            newVal = newVal.getIn(mapPath);
                         if (compare(baseVal, newVal))
                             return;
                         fn(newVal, baseVal, objectPath);

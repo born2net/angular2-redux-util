@@ -77,11 +77,8 @@ export class AppStore {
                     return function () {
                         var newVal = getValue(getState(), reducerName);
                         // if we are using a nested Immutable map, drill down the path
-                        if (mapPath.length > 0){
+                        if (mapPath.length > 0)
                             newVal = newVal.getIn(mapPath);
-                            console.log(newVal)
-                        }
-
                         if (compare(baseVal, newVal)) return;
                         fn(newVal, baseVal, objectPath);
                         baseVal = newVal;
