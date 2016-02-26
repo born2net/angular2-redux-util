@@ -17,6 +17,7 @@ var AppStore = (function () {
             };
             return _this.subscribe(f, filter, useIsEqual);
         };
+        // 2-26-2016 subscriber oldVal deprecated, returns same value as new
         this.subscribe = function (subscriber, filter, useIsEqual) {
             // decorate the subscriber with the state passed in as a parameter
             if (!filter)
@@ -40,8 +41,8 @@ var AppStore = (function () {
                             newVal = newVal.getIn(mapPath);
                         if (compare(baseVal, newVal))
                             return;
-                        fn(newVal, baseVal, objectPath);
                         baseVal = newVal;
+                        fn(newVal, baseVal, objectPath);
                     };
                 };
             }

@@ -1,13 +1,13 @@
 {
     "name": "angular2-redux-util",
-    "version": "0.8.55",
+    "version": "0.8.57",
     "description": "Wrapper components for using Redux in an Angular2 application",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "scripts": {
         "lint": "tslint src/**/*.ts -s node_modules/tslint-stylish -t stylish",
         "commit": "git-cz",
-        "build & copy": "npm run build && cp -r -f ./dist/ ../studioDashboard/node_modules/angular2-redux-util/ && cp -r -f ./src/ ../studioDashboard/jspm_packages/npm/angular2-redux-util@0.5.51 && cp -r -f ./dist/ ../studioDashboard/jspm_packages/npm/angular2-redux-util@0.5.51",
+        "build & copy": "npm run build && cp -r -f ./src/ ../studioDashboard/node_modules/angular2-redux-util/ && cp -r -f ./dist/ ../studioDashboard/node_modules/angular2-redux-util/ && cp -r -f ./src/ ../studioDashboard/jspm_packages/npm/angular2-redux-util@0.8.57 && cp -r -f ./dist/ ../studioDashboard/jspm_packages/npm/angular2-redux-util@0.8.57",
         "clean": "rimraf dist ",
         "build": "tsc --outDir dist --declaration",
         "test": "karma start",
