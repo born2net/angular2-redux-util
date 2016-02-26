@@ -56,7 +56,7 @@ export class AppStore {
             return this.subscribe(f, filter, useIsEqual)
         };
 
-        // 2-26-2016 subscriber oldVal deprecated, returns same value as new
+        // 2-28-2016 subscriber oldVal deprecated, returns same value as new
         this.subscribe = (subscriber:(state, oldVal?:any, newVal?:any)=>any, filter?:string, useIsEqual?:boolean) => {
             // decorate the subscriber with the state passed in as a parameter
             if (!filter)
