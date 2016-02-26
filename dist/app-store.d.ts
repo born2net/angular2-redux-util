@@ -6,6 +6,7 @@ export declare class AppStore {
     getState: () => any;
     /**
      * subscribe to a callback with the state
+     * oldVal deprecated
      */
     subscribe: (subscribeFunction: (state, oldVal?: any, newVal?: any) => void, filter?: string, useIsEqual?: boolean) => () => void;
     /**
