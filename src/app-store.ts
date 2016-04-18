@@ -37,6 +37,10 @@ export class AppStore {
      */
     public dispatch:(action)=>void;
     /**
+     * get a value from store
+     */
+    public getsKey:(i_reducer:string, i_path:string, key:string)=>any;
+    /**
      * Create a dispatcher as a curried function using the passed in action creator and an optional context
      */
     public createDispatcher:(actionCreator, context?)=>(...n:any[])=>void;
@@ -96,6 +100,10 @@ export class AppStore {
         };
         this.replaceReducer = (nextReducer) => {
             return store.replaceReducer(nextReducer);
+        };
+        this.getsKey = (i_reducer, i_path, key) => {
+            var reducer = store.getState()[i_reducer];
+            return reducer.getIn([i_path]).getKey(key);
         };
         this.dispatch = (action) => {
             return store.dispatch(action);

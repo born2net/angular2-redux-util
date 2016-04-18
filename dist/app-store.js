@@ -17,7 +17,7 @@ var AppStore = (function () {
             };
             return _this.subscribe(f, filter, useIsEqual);
         };
-        // 2-26-2016 subscriber oldVal deprecated, returns same value as new
+        // 2-28-2016 subscriber oldVal deprecated, returns same value as new
         this.subscribe = function (subscriber, filter, useIsEqual) {
             // decorate the subscriber with the state passed in as a parameter
             if (!filter)
@@ -53,6 +53,10 @@ var AppStore = (function () {
         };
         this.replaceReducer = function (nextReducer) {
             return store.replaceReducer(nextReducer);
+        };
+        this.getsKey = function (i_reducer, i_path, key) {
+            var reducer = store.getState()[i_reducer];
+            return reducer.getIn([i_path]).getKey(key);
         };
         this.dispatch = function (action) {
             return store.dispatch(action);
