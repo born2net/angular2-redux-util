@@ -23,6 +23,10 @@ export declare class AppStore {
      */
     dispatch: (action) => void;
     /**
+     * get a value from store
+     */
+    getsKey: (i_reducer: string, i_path: string, key: string) => any;
+    /**
      * Create a dispatcher as a curried function using the passed in action creator and an optional context
      */
     createDispatcher: (actionCreator, context?) => (...n: any[]) => void;
