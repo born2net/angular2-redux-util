@@ -1,9 +1,13 @@
 /**
  * Wrapper for app store
  */
+///<reference path="../typings/app.d.ts"/>
+// var isEqual = require('is-equal');
+// var Immutable = require('immutable');
+// var getValue = require('object-path').get;
 var isEqual = require('is-equal');
-var Immutable = require('immutable');
-var getValue = require('object-path').get;
+var objectPath = require('object-path');
+var getValue = objectPath.get;
 var AppStore = (function () {
     function AppStore(store) {
         var _this = this;

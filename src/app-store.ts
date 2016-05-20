@@ -2,11 +2,18 @@
  * Wrapper for app store
  */
 
+///<reference path="../typings/app.d.ts"/>
+
 declare function require(path:any):any;
 
-var isEqual = require('is-equal');
-var Immutable = require('immutable');
-var getValue = require('object-path').get;
+// var isEqual = require('is-equal');
+// var Immutable = require('immutable');
+// var getValue = require('object-path').get;
+
+import * as isEqual from 'is-equal'
+import * as Immutable from 'immutable'
+import * as objectPath from 'object-path'
+var getValue = objectPath.get;
 
 export class AppStore {
 

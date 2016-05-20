@@ -1,3 +1,4 @@
+/// <reference path="../typings/app.d.ts" />
 export declare class AppStore {
     private store;
     /**
