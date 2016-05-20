@@ -4,8 +4,7 @@
 
 ///<reference path="../typings/app.d.ts"/>
 
-declare function require(path:any):any;
-
+// declare function require(path:any):any;
 // var isEqual = require('is-equal');
 // var Immutable = require('immutable');
 // var getValue = require('object-path').get;
